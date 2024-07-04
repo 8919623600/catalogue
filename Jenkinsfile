@@ -1,7 +1,5 @@
 pipeline { 
-    agent {
-        labels 'ws'
-    }
+    agent any
     stages {
         stage('Lint Checks') {
             steps {
