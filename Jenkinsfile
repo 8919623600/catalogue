@@ -1,6 +1,12 @@
 @Library('shared-library') _
 
-env.COMPONENT="CATALOGUE"
-// call is the function that will be called by default. so, we are declaring the entire pipeline in the vars/nodejs.groovy
+node('ws') {
 
-nodejs()
+env.COMPONENT="catalogue"   // this is how variable is declared and this we can call from shared library
+env.APPTYPE="nodejs"
+env.TAG_NAME="latest"
+
+docker()
+
+      
+}
